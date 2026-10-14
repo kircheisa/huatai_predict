@@ -1,0 +1,72 @@
+
+=== [阶段1] max_depth [2,3,4] ===
+  depth=2                   Acc=0.5108  F1=0.4977  AUC=0.5005  folds=11
+  depth=3                   Acc=0.5108  F1=0.4977  AUC=0.5005  folds=11
+  depth=4                   Acc=0.5108  F1=0.4977  AUC=0.5005  folds=11
+  >>> depth=2 AUC=0.5005
+
+=== [阶段2] lr [0.03,0.05,0.1] (depth=2) ===
+  lr=0.03                   Acc=0.5022  F1=0.4873  AUC=0.4745  folds=11
+  lr=0.05                   Acc=0.5108  F1=0.4977  AUC=0.5005  folds=11
+  lr=0.1                    Acc=0.5238  F1=0.5020  AUC=0.5136  folds=11
+  >>> lr=0.1 AUC=0.5136
+
+=== [阶段3] mcw [3,5,8] (lr=0.1) ===
+  mcw=3                     Acc=0.5152  F1=0.4917  AUC=0.4863  folds=11
+  mcw=5                     Acc=0.4791  F1=0.4701  AUC=0.4763  folds=11
+  mcw=8                     Acc=0.5238  F1=0.5020  AUC=0.5136  folds=11
+  >>> mcw=8.0 AUC=0.5136
+
+=== [阶段4] reg_alpha [0.1,0.5,1.0] (mcw=8.0) ===
+  ra=0.1                    Acc=0.5368  F1=0.5008  AUC=0.4968  folds=11
+  ra=0.5                    Acc=0.5238  F1=0.5020  AUC=0.5136  folds=11
+============================================================
+开始时间: 11:38:17
+样本: 935, 特征: 225
+
+[阶段1] max_depth
+  testing depth=2...
+  depth=2                   Acc=0.5108  F1=0.4977  AUC=0.5005  folds=11
+  testing depth=3...
+  depth=3                   Acc=0.5108  F1=0.4977  AUC=0.5005  folds=11
+  testing depth=4...
+  depth=4                   Acc=0.5108  F1=0.4977  AUC=0.5005  folds=11
+  >>> best depth=2 AUC=0.5005
+
+[阶段2] lr (depth=2)
+  testing lr=0.03...
+  lr=0.03                   Acc=0.5022  F1=0.4873  AUC=0.4745  folds=11
+  testing lr=0.05...
+  lr=0.05                   Acc=0.5108  F1=0.4977  AUC=0.5005  folds=11
+  testing lr=0.1...
+  lr=0.1                    Acc=0.5238  F1=0.5020  AUC=0.5136  folds=11
+  >>> best lr=0.1 AUC=0.5136
+
+[阶段3] mcw (lr=0.1)
+  testing mcw=3...
+  mcw=3                     Acc=0.5152  F1=0.4917  AUC=0.4863  folds=11
+  testing mcw=5...
+  mcw=5                     Acc=0.4791  F1=0.4701  AUC=0.4763  folds=11
+  testing mcw=8...
+  mcw=8                     Acc=0.5238  F1=0.5020  AUC=0.5136  folds=11
+  >>> best mcw=8.0 AUC=0.5136
+
+[阶段4] reg_alpha (mcw=8.0)
+  testing ra=0.1...
+  ra=0.1                    Acc=0.5368  F1=0.5008  AUC=0.4968  folds=11
+  testing ra=0.5...
+  ra=0.5                    Acc=0.5238  F1=0.5020  AUC=0.5136  folds=11
+  testing ra=1.0...
+  ra=1.0                    Acc=0.5455  F1=0.5218  AUC=0.5251  folds=11
+  >>> best ra=1.0 AUC=0.5251
+
+============================================================
+最优: depth=2, lr=0.1, mcw=8.0, ra=1.0
+Top 5:
+  1. ra=1.0               AUC=0.5251  F1=0.5218  Acc=0.5455
+  2. lr=0.1               AUC=0.5136  F1=0.5020  Acc=0.5238
+  3. mcw=8                AUC=0.5136  F1=0.5020  Acc=0.5238
+  4. ra=0.5               AUC=0.5136  F1=0.5020  Acc=0.5238
+  5. depth=2              AUC=0.5005  F1=0.4977  Acc=0.5108
+
+DONE 11:40:54

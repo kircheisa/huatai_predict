@@ -1,0 +1,9 @@
+loaded: 935 rows, 225 cols
+阶段4: reg_alpha (depth=3, lr=0.1, mcw=8)
+testing ra=0.1...
+ra=0.1        Acc=0.5368  F1=0.5008  AUC=0.4968
+testing ra=0.5...
+ra=0.5        Acc=0.5238  F1=0.5020  AUC=0.5136
+testing ra=1.0...
+ra=1.0        Acc=0.5455  F1=0.5218  AUC=0.5251
+DONE

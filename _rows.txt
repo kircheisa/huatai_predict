@@ -1,0 +1,1 @@
+data_rows=5489 rate_rows=5139 data_start=2010-01-01 data_end=2025-01-10

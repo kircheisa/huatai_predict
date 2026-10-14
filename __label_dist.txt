@@ -1,0 +1,30 @@
+overall_counts
+label
+0     986
+1    1659
+2     862
+overall_ratio_pct
+label
+0    28.12
+1    47.31
+2    24.58
+train_counts
+label
+0     808
+1    1238
+2     759
+train_ratio_pct
+label
+0    28.81
+1    44.14
+2    27.06
+test_counts
+label
+0    178
+1    421
+2    103
+test_ratio_pct
+label
+0    25.36
+1    59.97
+2    14.67
